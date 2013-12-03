@@ -25,9 +25,11 @@
 <v t="peckj.20131202081144.4701" a="E"><vh>Chapter 2</vh>
 <v t="peckj.20131202081144.4720"><vh>@file GraphCode.py</vh></v>
 <v t="peckj.20131202081144.4747" a="E"
-expanded="peckj.20131202081144.4755,"><vh>@file Graph.py</vh></v>
+expanded="peckj.20131202081144.4755,peckj.20131202081144.4759,"><vh>@file Graph.py</vh></v>
 <v t="peckj.20131202180255.3707"><vh>@file GraphWorld.py</vh></v>
-<v t="peckj.20131202180255.3742" a="E"><vh>@file GraphTest.py</vh></v>
+<v t="peckj.20131202180255.3742"><vh>@file GraphTest.py</vh></v>
+<v t="peckj.20131202180255.3747"
+expanded="peckj.20131202180255.3749,"><vh>@file RandomGraph.py</vh></v>
 </v>
 </vnodes>
 <tnodes>

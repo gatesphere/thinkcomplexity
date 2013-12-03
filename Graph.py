@@ -148,6 +148,18 @@ class Graph(dict):
           # connect additionally to vertex directly opposite
           for i in range(len(vs)):
               self.add_edge(Edge(vs[i], vs[i-len(vs)/2]))
+    #@+node:peckj.20131202180255.3752: *3* is_connected (ex. 2.5)
+    def is_connected(self):
+      workqueue = [self.vertices()[0]]
+      seen = []
+      while len(workqueue) > 0:
+        v = workqueue[0]
+        workqueue = workqueue[1:]
+        seen.append(v)
+        for n in self[v].keys():
+          if n not in seen and n not in workqueue:
+            workqueue.append(n)
+      return len(seen) == len(self.vertices())
     #@-others
 
 #@+node:peckj.20131202081144.4759: ** main
@@ -205,6 +217,19 @@ def main(script, *args):
     print "graph g:", g
     g.add_all_edges()
     print "graph g:", g
+    #@+node:peckj.20131202180255.3754: *3* is_connected
+    print
+    print 'is_connected'
+    v = Vertex('v')
+    w = Vertex('w')
+    x = Vertex('x')
+    y = Vertex('y')
+    g = Graph([v,w,x,y],[])
+    print "graph g:", g
+    print 'is_connected:', g.is_connected()
+    g.add_all_edges()
+    print "graph g:", g
+    print 'is_connected:', g.is_connected()
     #@-others
 #@-others
 
