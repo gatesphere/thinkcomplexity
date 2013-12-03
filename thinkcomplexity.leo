@@ -16,7 +16,7 @@
 <v t="peckj.20131203081434.3828"><vh>@edit .gitignore</vh></v>
 </v>
 <v t="peckj.20131202081144.4700"><vh>Chapter 1</vh>
-<v t="peckj.20131202081144.4711"><vh>Simplified schelling model</vh>
+<v t="peckj.20131202081144.4711" a="E"><vh>Simplified Schelling model</vh>
 <v t="peckj.20131202081144.4712"><vh>&lt;&lt; imports &gt;&gt;</vh></v>
 <v t="peckj.20131202081144.4713"><vh>&lt;&lt; declarations &gt;&gt;</vh></v>
 <v t="peckj.20131202081144.4714"><vh>create_city</vh></v>
@@ -27,13 +27,19 @@
 <v t="peckj.20131202081144.4719"><vh>main</vh></v>
 </v>
 </v>
-<v t="peckj.20131202081144.4701" a="E"><vh>Chapter 2</vh>
+<v t="peckj.20131202081144.4701"><vh>Chapter 2</vh>
 <v t="peckj.20131202081144.4720"><vh>@file GraphCode.py</vh></v>
-<v t="peckj.20131202081144.4747"><vh>@file Graph.py</vh></v>
+<v t="peckj.20131202081144.4747" a="E"><vh>@file Graph.py</vh></v>
 <v t="peckj.20131202180255.3707"><vh>@file GraphWorld.py</vh></v>
 <v t="peckj.20131202180255.3742"><vh>@file GraphTest.py</vh></v>
 <v t="peckj.20131202180255.3747" a="E"><vh>@file RandomGraph.py</vh></v>
 <v t="peckj.20131203081434.3832" a="E"><vh>@file AlphaNumGenerator.py</vh></v>
+</v>
+<v t="peckj.20131203081434.4546"><vh>Chapter 3</vh>
+<v t="peckj.20131203081434.4547"><vh>@file BisectSearch.py</vh></v>
+<v t="peckj.20131203081434.4553"
+expanded="peckj.20131203081434.4556,peckj.20131203081434.4557,"><vh>@file Map.py</vh></v>
+<v t="peckj.20131203081434.4591" a="E"><vh>@file TreeMap.py</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -108,5 +114,6 @@ trials = 1000
   g.es('Done', tabName='City')
     </t>
 <t tx="peckj.20131203081434.3829"></t>
+<t tx="peckj.20131203081434.4546"></t>
 </tnodes>
 </leo_file>
