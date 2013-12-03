@@ -10,6 +10,11 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
+<v t="peckj.20131203081434.3829"><vh>Github stuff</vh>
+<v t="peckj.20131203081434.3826"><vh>@edit README.md</vh></v>
+<v t="peckj.20131203081434.3827"><vh>@edit LICENSE</vh></v>
+<v t="peckj.20131203081434.3828"><vh>@edit .gitignore</vh></v>
+</v>
 <v t="peckj.20131202081144.4700"><vh>Chapter 1</vh>
 <v t="peckj.20131202081144.4711"><vh>Simplified schelling model</vh>
 <v t="peckj.20131202081144.4712"><vh>&lt;&lt; imports &gt;&gt;</vh></v>
@@ -24,12 +29,11 @@
 </v>
 <v t="peckj.20131202081144.4701" a="E"><vh>Chapter 2</vh>
 <v t="peckj.20131202081144.4720"><vh>@file GraphCode.py</vh></v>
-<v t="peckj.20131202081144.4747" a="E"
-expanded="peckj.20131202081144.4755,peckj.20131202081144.4759,"><vh>@file Graph.py</vh></v>
+<v t="peckj.20131202081144.4747"><vh>@file Graph.py</vh></v>
 <v t="peckj.20131202180255.3707"><vh>@file GraphWorld.py</vh></v>
 <v t="peckj.20131202180255.3742"><vh>@file GraphTest.py</vh></v>
-<v t="peckj.20131202180255.3747"
-expanded="peckj.20131202180255.3749,"><vh>@file RandomGraph.py</vh></v>
+<v t="peckj.20131202180255.3747" a="E"><vh>@file RandomGraph.py</vh></v>
+<v t="peckj.20131203081434.3832" a="E"><vh>@file AlphaNumGenerator.py</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -103,5 +107,6 @@ trials = 1000
     print_city(city)
   g.es('Done', tabName='City')
     </t>
+<t tx="peckj.20131203081434.3829"></t>
 </tnodes>
 </leo_file>

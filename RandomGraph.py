@@ -11,6 +11,7 @@ from Graph import Edge
 
 import random
 import itertools
+import string
 #@-<< imports >>
 #@+others
 #@+node:peckj.20131202180255.3749: ** class RandomGraph
@@ -22,14 +23,27 @@ class RandomGraph(Graph):
       if random.random() <= p:
         self.add_edge(Edge(e1,e2))
   #@-others
+#@+node:peckj.20131203081434.3831: ** test_p (ex. 2.6)
+def test_p(n, p, num):
+  labels = string.lowercase + string.uppercase + string.punctuation
+  count = 0
+  for i in range(num):
+    vs = [Vertex(c) for c in labels[:n]]
+    g = RandomGraph(vs,[])
+    g.add_random_edges(p)
+    if g.is_connected(): count += 1
+  return count
+      
 #@+node:peckj.20131202180255.3751: ** main
-def main():
-  vertices = [Vertex(x) for x in ['a', 'b', 'c', 'd', 'e']]
-  g = RandomGraph(vertices, [])
-  g.add_random_edges(0.1)
-  print g
+def main(script, n=26, p=0.1, num=1, *args):
+  n = int(n)
+  p = float(p)
+  num = int(num)
+  count = test_p(n, p, num)
+  print count
 #@-others
 
 if __name__=='__main__':
-  main()
+  import sys
+  main(*sys.argv)
 #@-leo

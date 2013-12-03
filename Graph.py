@@ -139,7 +139,6 @@ class Graph(dict):
             raise ValueError, 'Cannot construct a n-regular graph with odd vertices and odd n'
         for i in range(len(vs)):
             start = i+1
-            print '%s -> %s' % (i, start)
             for j in range(n/2):
                 if start+j > len(vs)-1: start -= len(vs)
                 t = start+j
