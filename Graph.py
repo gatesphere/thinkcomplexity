@@ -87,7 +87,7 @@ class Graph(dict):
         v, w = e
         self[v][w] = e
         self[w][v] = e
-    #@+node:peckj.20131202081144.4760: *3* get_edge (ex. 2.3)
+    #@+node:peckj.20131202081144.4760: *3* get_edge (ex. 2.2.3)
     def get_edge(self, v1, v2):
         ''' returns the edge connecting two verticies, or None if 
             no such edge exists
@@ -97,25 +97,63 @@ class Graph(dict):
           return e
         except:
           return None
-    #@+node:peckj.20131202081144.4761: *3* remove_edge (ex. 2.4)
+    #@+node:peckj.20131202081144.4761: *3* remove_edge (ex. 2.2.4)
     def remove_edge(self, e):
       v,w = e
       del self[v][w]
       del self[w][v]
-    #@+node:peckj.20131202081144.4762: *3* vertices (ex. 2.5)
+    #@+node:peckj.20131202081144.4762: *3* vertices (ex. 2.2.5)
     def vertices(self):
       return self.keys()
-    #@+node:peckj.20131202081144.4763: *3* edges (ex. 2.6)
+    #@+node:peckj.20131202081144.4763: *3* edges (ex. 2.2.6)
     def edges(self):
       edgelist = []
       for i in self.keys():
         for x in self[i].keys():
           edgelist.append(self[i][x])
       return list(set(edgelist)) # ugly, slow hack to return a unique list
+    #@+node:peckj.20131202180255.3694: *3* out_vertices (ex. 2.2.7)
+    def out_vertices(self, v):
+      return self[v].keys()
+    #@+node:peckj.20131202180255.3701: *3* out_edges (ex. 2.2.8)
+    def out_edges(self, v):
+      edgelist = []
+      for x in self[v].keys():
+        edgelist.append(self[v][x])
+      return edgelist
+    #@+node:peckj.20131202180255.3704: *3* add_all_edges (ex. 2.2.9)
+    def add_all_edges(self):
+      ''' from an edgeless graph, it creates a complete graph '''
+      import itertools
+      for e1,e2 in itertools.combinations(self.vertices(), 2):
+        self.add_edge(Edge(e1,e2))
+    #@+node:peckj.20131202180255.3746: *3* add_regular_edges (ex. 2.3)
+    def add_regular_edges(self, n):
+        ''' converts an edgeless graph to a n-regular graph 
+            (i.e. all vertices have the same number of edges) 
+        '''
+        if n < 0 or n >= len(self.vertices()):
+            raise ValueError, '0 <= n < len(self.vertices()) must be true.'
+        vs = self.vertices()
+        if len(vs)%2 != 0 and n%2 != 0:
+            raise ValueError, 'Cannot construct a n-regular graph with odd vertices and odd n'
+        for i in range(len(vs)):
+            start = i+1
+            print '%s -> %s' % (i, start)
+            for j in range(n/2):
+                if start+j > len(vs)-1: start -= len(vs)
+                t = start+j
+                self.add_edge(Edge(vs[i], vs[t]))
+        if n%2 != 0: # n is odd
+          # connect additionally to vertex directly opposite
+          for i in range(len(vs)):
+              self.add_edge(Edge(vs[i], vs[i-len(vs)/2]))
     #@-others
 
 #@+node:peckj.20131202081144.4759: ** main
 def main(script, *args):
+    #@+others
+    #@+node:peckj.20131202180255.3695: *3* basic tests
     print 'basic tests'
     v = Vertex('v')
     print "vertex v:", v
@@ -125,9 +163,11 @@ def main(script, *args):
     print "edge e:", e
     g = Graph([v,w], [e])
     print "graph g:", g
+    #@+node:peckj.20131202180255.3696: *3* edges
     print
     print 'edges'
     print "edges:", g.edges()
+    #@+node:peckj.20131202180255.3697: *3* get_edge
     print
     print 'get_edge'
     edge = g.get_edge(v,w)
@@ -136,14 +176,36 @@ def main(script, *args):
     print "edge:", edge
     edge = g.get_edge(v,Vertex('q'))
     print "edge:", edge
+    #@+node:peckj.20131202180255.3698: *3* remove_edge
     print
     print 'remove_edge'
     g.remove_edge(e)
     print "graph g:", g
+    #@+node:peckj.20131202180255.3699: *3* vertices
     print
     print 'vertices'
     print "g.vertices:", g.vertices()
-    
+    #@+node:peckj.20131202180255.3700: *3* out_vertices
+    print
+    print 'out_vertices'
+    g.add_edge(e)
+    print g.out_vertices(v)
+    #@+node:peckj.20131202180255.3703: *3* out_edges
+    print
+    print 'out_edges'
+    print g.out_edges(v)
+    #@+node:peckj.20131202180255.3706: *3* add_all_edges
+    print
+    print 'add_all_edges'
+    v = Vertex('v')
+    w = Vertex('w')
+    x = Vertex('x')
+    y = Vertex('y')
+    g = Graph([v,w,x,y],[])
+    print "graph g:", g
+    g.add_all_edges()
+    print "graph g:", g
+    #@-others
 #@-others
 
 if __name__ == '__main__':
