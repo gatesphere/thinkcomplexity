@@ -27,19 +27,27 @@
 <v t="peckj.20131202081144.4719"><vh>main</vh></v>
 </v>
 </v>
-<v t="peckj.20131202081144.4701"><vh>Chapter 2</vh>
+<v t="peckj.20131202081144.4701" a="E"><vh>Chapter 2</vh>
 <v t="peckj.20131202081144.4720"><vh>@file GraphCode.py</vh></v>
-<v t="peckj.20131202081144.4747" a="E"><vh>@file Graph.py</vh></v>
+<v t="peckj.20131202081144.4747" a="E"
+expanded="peckj.20131202081144.4749,peckj.20131202081144.4755,"><vh>@file Graph.py</vh></v>
 <v t="peckj.20131202180255.3707"><vh>@file GraphWorld.py</vh></v>
 <v t="peckj.20131202180255.3742"><vh>@file GraphTest.py</vh></v>
-<v t="peckj.20131202180255.3747" a="E"><vh>@file RandomGraph.py</vh></v>
-<v t="peckj.20131203081434.3832" a="E"><vh>@file AlphaNumGenerator.py</vh></v>
+<v t="peckj.20131202180255.3747" a="E"
+expanded="peckj.20131202180255.3749,"><vh>@file RandomGraph.py</vh></v>
+<v t="peckj.20131203081434.3832"><vh>@file AlphaNumGenerator.py</vh></v>
 </v>
 <v t="peckj.20131203081434.4546"><vh>Chapter 3</vh>
 <v t="peckj.20131203081434.4547"><vh>@file BisectSearch.py</vh></v>
 <v t="peckj.20131203081434.4553"
 expanded="peckj.20131203081434.4556,peckj.20131203081434.4557,"><vh>@file Map.py</vh></v>
 <v t="peckj.20131203081434.4591" a="E"><vh>@file TreeMap.py</vh></v>
+</v>
+<v t="peckj.20131211141232.3866" a="E"><vh>Chapter 4</vh>
+<v t="peckj.20131211141232.3867"><vh>@file fifo.py</vh></v>
+<v t="peckj.20131211141232.3877" a="E"
+expanded="peckj.20131211141232.3881,"><vh>@file SmallWorldGraph.py</vh></v>
+<v t="peckj.20131211141232.3887" a="E"><vh>@file SmallWorldGraphTest.py</vh></v>
 </v>
 </vnodes>
 <tnodes>
@@ -115,5 +123,6 @@ trials = 1000
     </t>
 <t tx="peckj.20131203081434.3829"></t>
 <t tx="peckj.20131203081434.4546"></t>
+<t tx="peckj.20131211141232.3866"></t>
 </tnodes>
 </leo_file>
